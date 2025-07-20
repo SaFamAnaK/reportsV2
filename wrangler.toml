@@ -1,9 +1,12 @@
-[site]
-bucket = "./public"
-main = "index.html"
+main = "server.js"
 name = "reportsv2"
 type = "javascript"
 compatibility_date = "2025-07-20"
+
+
+[site]
+bucket = "./public"
+main = "index.html"
 
 [[r2_buckets]]
 binding = "R2"
