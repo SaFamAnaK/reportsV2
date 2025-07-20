@@ -3,6 +3,17 @@ import { Router } from 'itty-router';
 import PizZip from 'pizzip';
 import Docxtemplater from 'docxtemplater';
 import { zipSync } from 'fflate';
+import { serveStatic } from "worktop/middleware-static";
+
+export default {
+  fetch: async (req, env, ctx) => {
+    const url = new URL(req.url);
+    if (url.pathname.startsWith("/api/")) {
+      return handleAPI(req, env);
+    }
+    return serveStatic(req, env, ctx); // fallback to static files
+  },
+};
 
 const router = Router();
 
@@ -91,8 +102,3 @@ router.post('/api/generate', async (request) => {
     return new Response('Error generating document', { status: 500 });
   }
 });
-
-// Export Worker
-export default {
-  fetch: router.handle,
-};
