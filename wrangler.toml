@@ -1,0 +1,10 @@
+name = "reports"
+type = "javascript"
+compatibility_date = "2025-07-20"
+
+[site]
+bucket = "./public"
+
+[[r2_buckets]]
+binding = "R2"
+bucket_name = "general"

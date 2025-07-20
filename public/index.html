@@ -1,0 +1,33 @@
+
+<!DOCTYPE html>
+<html lang="he">
+<head>
+  <meta charset="UTF-8">
+  <title>יצירת דו"ח</title>
+  <link rel="icon" href="/peru.png" type="image/png">
+  <link rel="stylesheet" href="style.css">
+</head>
+  <body>
+  <div id="loadingOverlay" style="display: none;">
+    <div class="spinner-container">
+      <img src="/gif.gif" alt="Processing..." width="100">
+    </div>
+  </div>
+  <h1>טופס חוות דעת מומחה</h1>
+  <h4><span class="red-heart">❤️</span> Te Amo Papi <span class="red-heart">❤️</span></h4>
+  <form id="reportForm" enctype="multipart/form-data">
+    <label>תאריך: <input type="date" name="date" required></label>
+    <label>חברה: <input type="text" name="company" required></label>
+    <label>מספר דוח: <input type="text" name="report_number" required></label>
+    <label>מספר קריאה: <input type="text" name="job_number" required></label>
+    <label>כתובת: <input type="text" name="address" required></label>
+    <label>סוג נכס: <input type="text" name="house_type" required></label>
+    <label>ממצאים: <textarea name="findings" required></textarea></label>
+    <div id="photoFieldsContainer"></div>
+    <button type="button" id="addPhotoButton">➕ הוסף תמונה</button>
+    <button type="submit" class="left-align-btn">הורד ZIP</button>
+  </form>
+  <script src="script.js"></script>
+</body>
+</html>
+
