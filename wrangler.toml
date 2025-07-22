@@ -1,13 +1,10 @@
+name = "reportsv3"
 main = "server.js"
-name = "reportsv2"
-type = "javascript"
-compatibility_date = "2025-07-20"
-
+compatibility_date = "2024-07-22"
 
 [site]
 bucket = "./public"
-main = "index.html"
 
 [[r2_buckets]]
-binding = "R2"
+binding = "TEMPLATES"
 bucket_name = "general"
